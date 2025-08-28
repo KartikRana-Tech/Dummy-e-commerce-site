@@ -1,0 +1,266 @@
+.nav_color {
+  background-color: rgb(54, 52, 52);
+  position: relative;
+
+  .nav_container {
+    background-color: rgb(54, 52, 52);
+    display: flex;
+    align-items: center;
+    // flex-wrap: wrap;
+    justify-content: space-between;
+
+
+
+
+    .nav_bar {
+      color: white;
+      align-items: center;
+
+      h1 {
+        margin: 0;
+        font-size: 1.6em;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      img {
+        height: 3rem;
+        width: 4rem;
+        border-radius: 5px;
+      }
+    }
+
+    .nav_content {
+      font-family: "Mulish", sans-serif;
+      height: auto;
+      width: auto;
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.06rem;
+
+      ul {
+        display: flex;
+        list-style-type: none;
+        gap: 2rem;
+        margin: 0;
+
+        li {
+          padding: 25px 0;
+          color: white;
+          font-family: "Mulish", sans-serif;
+          font-size: 15px;
+          font-weight: 600;
+          letter-spacing: 0.06rem;
+          
+
+          &:hover {
+            cursor: pointer;
+            color: greenyellow;
+          }
+
+          .link_paths{
+text-decoration: none;
+color: inherit;
+
+          }
+
+        }
+      }
+
+      
+
+    }
+
+    .icon_box {
+      display: flex;
+      gap: 1rem;
+      font-size: 20px;
+      color: white;
+      margin-right: 5rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .ham_burger {
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      // flex-direction: column;
+      // align-items: flex-start;
+
+      .nav_content {
+        display: flex;
+        justify-content: start;
+        width: 100%;
+
+        ul {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+          margin: 1rem;
+          display: none;
+        }
+      }
+      .icon_box {
+        display: none;
+      }
+
+      .ham_burger {
+        display: block;
+      }
+    }
+  }
+
+  .mobile_navbar {
+    position: fixed;
+    background-color: #00000089;
+    height: 100%;
+    width: 100%;
+    top: 0;
+
+    .navbar_slide {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      right: 0;
+      background-color: #fff;
+      height: 100%;
+      width: 50%;
+      padding: 15px;
+      top: 0;
+      text-align: center;
+      border-radius: 5px;
+
+      a {
+        &:hover {
+          color: #835ff8;
+        }
+      }
+    }
+
+    .exit_btn {
+      text-align: end;
+      color: black;
+      font-size: 22px;
+    }
+  }
+}
+
+.shop_dropdown {
+
+
+&:hover{
+
+.shop_items{
+  display: block;
+}
+
+}
+
+  .shop_items {
+    display: none;
+    left: 7.5%;
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    width: 85%;
+
+    .item_section {
+      display: flex;
+      justify-content: space-around;
+      margin: 10px 0;
+      text-transform: capitalize;
+
+      .item_menu {
+        img {
+          margin: 15px 0;
+          height: 12rem;
+          object-fit: cover;
+          overflow: hidden;
+        }
+        h2 {
+          font-family: Montserrat, sans-serif;
+
+          margin-top: 25px;
+          margin-bottom: 35px;
+          font-size: 16px;
+          letter-spacing: 0.6px;
+          font-weight: 700;
+          color: black;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+          line-height: 5px;
+          font-family: Montserrat, sans-serif;
+
+        }
+
+        li {
+          font-size: 14px;
+          letter-spacing: 0;
+          padding: 0px 0;
+          font-weight: 400;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+.shop_arrival {
+  &:hover .nav_dropdown {
+    color: white;
+    display: block;
+  }
+
+  .nav_dropdown {
+    background-color: white;
+    width: 86%;
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    display: none;
+
+    .items_list {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .item_content {
+      width: 23%;
+      overflow: hidden;
+
+      img {
+        height: 80%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      p {
+        background-color: #835ff8;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 10px;
+        text-align: center;
+        transition: all ease-in-out 0.4s;
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+}

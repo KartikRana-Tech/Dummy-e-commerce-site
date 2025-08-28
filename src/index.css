@@ -1,0 +1,21 @@
+body {
+  all: unset;
+  font-family: "Montserrat", sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.common_margin{
+  margin: 70px 0;
+}
+
+.nav_container{
+    max-width: 1400px;
+  margin: 0 auto;
+}
