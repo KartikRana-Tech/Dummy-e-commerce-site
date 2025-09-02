@@ -135,6 +135,15 @@
             width: 100%;
             object-fit: cover;
           }
+            &:hover img {
+          transform: scale(1.05);
+          animation: flash 0.4s linear;
+        }
+        @keyframes flash {
+          0% {
+            opacity: 0.1;
+          }
+        }
         }
       }
 
@@ -156,6 +165,15 @@
               width: 100%;
               overflow: hidden;
             }
+              &:hover img {
+          transform: scale(1.05);
+          animation: flash 0.4s linear;
+        }
+        @keyframes flash {
+          0% {
+            opacity: 0.1;
+          }
+        }
           }
           .feature_content {
             width: 30%;
@@ -292,6 +310,15 @@
               height: 100%;
               width: 100%;
             }
+              &:hover img {
+          transform: scale(1.05);
+          animation: flash 0.4s linear;
+        }
+        @keyframes flash {
+          0% {
+            opacity: 0.1;
+          }
+        }
           }
         }
       }
@@ -333,6 +360,15 @@
               height: 100%;
               width: 100%;
             }
+              &:hover img {
+          transform: scale(1.05);
+          animation: flash 0.4s linear;
+        }
+        @keyframes flash {
+          0% {
+            opacity: 0.1;
+          }
+        }
           }
         }
       }

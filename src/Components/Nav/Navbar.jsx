@@ -7,9 +7,12 @@ import { Link, NavLink } from "react-router-dom";
 import logoImg from "../../../public/Images/logo_clean.png";
 import bagdumbell from "../../assets/bagdumbell.jpg";
 import { IoIosArrowDown } from "react-icons/io";
+import useCartStore from "../Zustand/Zustand";
 
 function Navbar() {
   const [openNav, setOpenNav] = useState(false);
+
+  const cartCount = useCartStore((s) => s.cart.length);
 
   return (
     <>
@@ -171,7 +174,9 @@ function Navbar() {
               <IoIosSearch className={styles.search_icon} />
               <div className={styles.cart_items}>
                 <BsCart />
-                <span className={styles.item_quantity}>0</span>
+                {cartCount > 0 && (
+                  <span className={styles.item_quantity}>{cartCount}</span>
+                )}
               </div>
             </div>
             <div class={styles.ham_burger} onClick={() => setOpenNav(true)}>

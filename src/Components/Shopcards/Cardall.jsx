@@ -3,6 +3,7 @@ import styles from "./Cardall.module.scss";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { FaEye } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
+import useCartStore from "../Zustand/Zustand";
 
 const Cardall = ({
   item,
@@ -12,20 +13,16 @@ const Cardall = ({
   iconsClassName,
   hoverContents,
 }) => {
-  const [addCart, setAddCart] = useState(null);
-  console.log(addCart, "addCart");
-
   const [showDetails, setShowDetails] = useState(false);
+
+  const addToCart = useCartStore((s) => s.addToCart);
   return (
     <div className={`${styles.product_card} ${className}`} key={index}>
       <div className={`${styles.product_image} ${className}`}>
         <img src={item.photo} />
         <div className={`${styles.icon_contents}  ${iconsClassName}`}>
           <div className={`${styles.hover_contents} ${hoverContents}`}>
-            <div
-              className={styles.icon_s}
-              onClick={() => setAddCart((prev) => prev + 1)}
-            >
+            <div className={styles.icon_s} onClick={() => addToCart(item)}>
               <MdOutlineAddShoppingCart />
             </div>
             <div className={styles.icon_s} onClick={() => setShowDetails(true)}>
@@ -39,7 +36,6 @@ const Cardall = ({
         <h2>{item.rating}</h2>
         <p>{item.price}</p>
       </div>
-      {addCart}
       {showDetails && (
         <div className={styles.product_modal}>
           <div className={styles.modal_content}>
@@ -63,7 +59,7 @@ const Cardall = ({
               </p>
               <div className={styles.btns_container}>
                 <div className={styles.add_btns}>
-                  <button>Add To Cart</button>
+                  <button onClick={()=>addToCart(item)}>Add To Cart</button>
                   <button>Add To Wishlist</button>
                 </div>
                 <div className={styles.buy_now}>
