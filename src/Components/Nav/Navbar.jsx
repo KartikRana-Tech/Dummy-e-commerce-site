@@ -3,7 +3,10 @@ import styles from "./Navbar.module.scss";
 import { IoIosSearch } from "react-icons/io";
 import { BsCart } from "react-icons/bs";
 import { IoMdExit } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import logoImg from "../../../public/Images/logo_clean.png";
+import bagdumbell from "../../assets/bagdumbell.jpg";
+import { IoIosArrowDown } from "react-icons/io";
 
 function Navbar() {
   const [openNav, setOpenNav] = useState(false);
@@ -14,22 +17,40 @@ function Navbar() {
         <div className={`${styles.global_use} nav_container`}>
           <header className={`${styles.nav_container}  flex`}>
             <div className={`${styles.nav_bar} flex`}>
-              <img src="./public/Images/logo_clean.png" />
+              {/* <img src={logoImg} /> */}
+              <img src={logoImg} alt="Hero" />
               <h1>MeFit</h1>
             </div>
 
             <div className={`${styles.nav_content} flex  `}>
               <ul>
                 <li>
-                  <Link className={styles.link_paths} to="/">
+                  <NavLink
+                    to="/"
+                    end
+                    className={({ isActive }) =>
+                      isActive
+                        ? `${styles.nav_link} ${styles.active}`
+                        : styles.nav_link
+                    }
+                  >
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
 
                 <li className={styles.shop_arrival}>
-                  <Link className={styles.link_paths} to="/new-arrivals">
+                  <NavLink
+                    to="/new-arrivals"
+                    end
+                    className={({ isActive }) =>
+                      isActive
+                        ? `${styles.nav_link} ${styles.active}`
+                        : styles.nav_link
+                    }
+                  >
                     New Arrivals
-                  </Link>
+                    <IoIosArrowDown className={styles.arrow_down} />
+                  </NavLink>
                   <div className={`${styles.nav_dropdown}`}>
                     <div className={styles.items_list}>
                       <div className={styles.item_content}>
@@ -38,7 +59,7 @@ function Navbar() {
                       </div>
 
                       <div className={styles.item_content}>
-                        <img src="./Images/bagdumbell.jpg" />
+                        <img src={bagdumbell} />
                         <p>Gym accessories $38.15</p>
                       </div>
 
@@ -56,7 +77,18 @@ function Navbar() {
                 </li>
 
                 <li className={styles.shop_dropdown}>
-                  Shop
+                  <NavLink
+                    to="/shop"
+                    end
+                    className={({ isActive }) =>
+                      isActive
+                        ? `${styles.nav_link} ${styles.active} `
+                        : styles.nav_link
+                    }
+                  >
+                    Shop
+                  </NavLink>
+                  <IoIosArrowDown className={styles.arrow_down} />
                   <div className={`${styles.shop_items} `}>
                     <div className={`${styles.item_section} `}>
                       <div className={styles.item_menu}>
@@ -107,15 +139,40 @@ function Navbar() {
                     </div>
                   </div>
                 </li>
-                <li>Calorie Calculator</li>
-                <li>Food Scale</li>
-                <li>Pedometer</li>
-                <li>Pages</li>
+                <li>
+                  <NavLink
+                    to="/calorieshop"
+                    end
+                    className={({ isActive }) =>
+                      isActive
+                        ? `${styles.nav_link} ${styles.active}`
+                        : styles.nav_link
+                    }
+                  >
+                    Calorie Calculator
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/foodscale"
+                    end
+                    className={({ isActive }) =>
+                      isActive
+                        ? `${styles.nav_link} ${styles.active}`
+                        : styles.nav_link
+                    }
+                  >
+                    Food Scale
+                  </NavLink>
+                </li>
               </ul>
             </div>
             <div className={styles.icon_box}>
-              <IoIosSearch />
-              <BsCart />
+              <IoIosSearch className={styles.search_icon} />
+              <div className={styles.cart_items}>
+                <BsCart />
+                <span className={styles.item_quantity}>0</span>
+              </div>
             </div>
             <div class={styles.ham_burger} onClick={() => setOpenNav(true)}>
               &#9776;
@@ -139,8 +196,6 @@ function Navbar() {
                 <a>Shop</a>
                 <a>Calorie Calculator</a>
                 <a>Food Scale</a>
-                <a>Pedometer</a>
-                <a>Pages</a>
               </div>
             </div>
           )}

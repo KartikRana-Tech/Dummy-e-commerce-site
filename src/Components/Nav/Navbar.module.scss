@@ -8,13 +8,16 @@
     align-items: center;
     // flex-wrap: wrap;
     justify-content: space-between;
+    text-align: center;
 
-
-
+    .arrow_down {
+      font-size: 10px;
+    }
 
     .nav_bar {
       color: white;
       align-items: center;
+      margin: 20px 0;
 
       h1 {
         margin: 0;
@@ -54,24 +57,26 @@
           font-size: 15px;
           font-weight: 600;
           letter-spacing: 0.06rem;
-          
 
           &:hover {
             cursor: pointer;
             color: greenyellow;
           }
 
-          .link_paths{
-text-decoration: none;
-color: inherit;
+          .nav_link {
+            text-decoration: none;
+            color: white;
 
+            &:hover {
+              color: greenyellow;
+            }
+
+            &.active {
+              color: greenyellow;
+            }
           }
-
         }
       }
-
-      
-
     }
 
     .icon_box {
@@ -80,8 +85,33 @@ color: inherit;
       font-size: 20px;
       color: white;
       margin-right: 5rem;
+      align-items: center;
       &:hover {
         cursor: pointer;
+      }
+
+      .search_icon {
+        margin: 0;
+        font-size: 45px;
+      }
+
+      .cart_items {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+
+        .item_quantity {
+          position: absolute;
+          background-color: yellowgreen;
+          border-radius: 50%;
+          color: black;
+          width: 30%;
+          font-size: 10px;
+          top: 1%;
+          padding: 1px;
+          left: 50%;
+        }
       }
     }
 
@@ -156,15 +186,11 @@ color: inherit;
 }
 
 .shop_dropdown {
-
-
-&:hover{
-
-.shop_items{
-  display: block;
-}
-
-}
+  &:hover {
+    .shop_items {
+      display: block;
+    }
+  }
 
   .shop_items {
     display: none;
@@ -204,7 +230,6 @@ color: inherit;
           padding: 0;
           line-height: 5px;
           font-family: Montserrat, sans-serif;
-
         }
 
         li {

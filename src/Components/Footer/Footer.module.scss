@@ -4,7 +4,8 @@
   font-family: "Mulish", sans-serif;
 
   .footer_contents {
-    font-size: 15px;
+    margin: 20px 0;
+    font-size: 18px;
     font-family: "Mulish", sans-serif;
 
     p {
@@ -21,7 +22,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .payment_icons {
@@ -30,7 +31,7 @@
     gap: 10px;
 
     img {
-      height: 26px;
+      height: 29px;
     }
   }
 
@@ -52,6 +53,56 @@
     .footer_contents {
       p {
         font-size: 13px;
+      }
+    }
+  }
+}
+.sec_fourteen {
+  background-image: url("/Images/footer.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+  .logo_foot {
+    padding: 1rem 0;
+    text-align: center;
+    padding: 0;
+  }
+
+  .list_items {
+    color: white;
+    padding: 1rem 0;
+    font-family: "Mulish", sans-serif;
+    font-size: 20px;
+         margin-top: 10px;
+
+    ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+ 
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .background_img {
+      margin: 0rem;
+    }
+
+    .list_items {
+      color: white;
+      padding: 0;
+      font-family: "Mulish", sans-serif;
+      font-size: 16px;
+
+      ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        align-items: center;
       }
     }
   }

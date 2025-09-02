@@ -1,30 +1,36 @@
 import React from "react";
 import styles from "./Arrival.module.scss";
+import first from "../../assets/first.jpg";
+import second from "../../assets/second.jpg";
+import third from "../../assets/third.jpg";
+import fourth from "../../assets/fourth.jpg";
+import fifth from "../../assets/fifth.jpg";
+import dumbell from "../../assets/bagdumbell.jpg";
 
 function Newarrivals() {
   const Items = [
     {
-      photo: "./Images/first.jpg",
+      photo: first,
       description: "Best Seller → [7]",
     },
     {
-      photo: "./Images/second.jpg",
+      photo: second,
       description: "Featured Products → [7]",
     },
     {
-      photo: "./Images/third.jpg",
+      photo: third,
       description: "Home Page → [7]",
     },
     {
-      photo: "./Images/fourth.jpg",
+      photo: fourth,
       description: "Latest Products → [7]",
     },
     {
-      photo: "./Images/fifth.jpg",
+      photo: fifth,
       description: "New Arrival → [7]",
     },
     {
-      photo: "./Images/bagdumbell.jpg",
+      photo: dumbell,
       description: "New Offers → [7]",
     },
   ];

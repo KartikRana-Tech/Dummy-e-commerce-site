@@ -17,9 +17,32 @@ import { LiaBicycleSolid } from "react-icons/lia";
 import { FaPersonRunning } from "react-icons/fa6";
 import { IoAlarm } from "react-icons/io5";
 import { GrSwim } from "react-icons/gr";
-import { ImSpoonKnife } from "react-icons/im";
+import { ImOpt, ImSpoonKnife } from "react-icons/im";
 import { IoIosSearch } from "react-icons/io";
 import { TfiMore } from "react-icons/tfi";
+import redwatch from "../../assets/redwatch.jpg";
+import call from "../../assets/Call.png";
+import two from "../../assets/two.png";
+import text from "../../assets/text.png";
+import wifi from "../../assets/wifi.png";
+import yellow from "../../assets/yellow.png";
+import trans from "../../assets/trans.png";
+import phone from "../../assets/phone.jpg";
+import yoga from "../../assets/yoga.png";
+import purplewatch from "../../assets/purplewatch.jpg";
+import plank from "../../assets/plank.jpg";
+import phonetwo from "../../assets/phonetwo.jpg";
+import laces from "../../assets/laces.jpg";
+import watching from "../../assets/watching.jpg";
+import hands from "../../assets/hands.jpg";
+import sleeping from "../../assets/sleeping.jpg";
+import sewatch from "../../assets/sewatch.jpg";
+import lastset from "../../assets/lastset.jpg";
+import blackblue from "../../assets/blackblue.jpg";
+import blueearphones from "../../assets/blueearphones.jpg";
+import bagdumbell from "../../assets/bagdumbell.jpg";
+import developer from "../../assets/developer.jpg";
+
 
 function Hero() {
   return (
@@ -91,7 +114,7 @@ function Hero() {
       <section className={` ${styles.third_container}   `}>
         <div className={`container${styles.xtra_space} common_margin `}>
           <div className={` ${styles.sec_third}   `}>
-            <img src="./public/Images/Redwatch.jpg" />
+            <img src={redwatch} />
             <div className={styles.content_div}>
               <h3>Calorie's Tracker</h3>
               <h5>WHAT YOU CAN'T STOP EXPECTING</h5>
@@ -106,12 +129,12 @@ function Hero() {
           </div>
           <div className={styles.logo_parent}>
             <div className={styles.logo_box}>
-              <img src="./Images/Call.png" />
-              <img src="./Images/two.png" />
-              <img src="./Images/text.png" />
-              <img src="./Images/wifi.png" />
-              <img src="./Images/yellow.png" />
-              <img src="./Images/trans.png" />
+              <img src={call} />
+              <img src={two} />
+              <img src={text} />
+              <img src={wifi} />
+              <img src={yellow} />
+              <img src={trans} />
             </div>
           </div>
         </div>
@@ -137,7 +160,7 @@ function Hero() {
         <div className={`${styles.global} common_margin`}>
           <div className={styles.flex_row}>
             <div>
-              <img src="./Images/phone.jpg" />
+              <img src={phone} />
             </div>
             <div className={styles.hea_ding}>
               <h2>Know yourself,Know your health</h2>
@@ -184,7 +207,7 @@ function Hero() {
         <div className={`container  ${styles.six_container} `}>
           <div className={`${styles.div_outer} common_margin`}>
             <div className={styles.img_div}>
-              <img src="./Images/yoga.png" />
+              <img src={yoga} />
             </div>
             <div className={styles.head_start}>
               <h2>Sweat today & Smile tomorrow</h2>
@@ -283,7 +306,7 @@ function Hero() {
               </div>
               <div className={styles.image_section}>
                 <div className={styles.purple_watch}>
-                  <img src="./Images/purpleWatch.jpg" />
+                  <img src={purplewatch} />
                 </div>
               </div>
               <div className={styles.section_third}>
@@ -337,7 +360,7 @@ function Hero() {
         </div>
         <div className={styles.image_gallery}>
           <div className={styles.img_div}>
-            <img src="./Images/plank.jpg" />
+            <img src={plank} />
             <div className={styles.content_sec}>
               <div className={styles.two_icons}>
                 <a>
@@ -355,7 +378,7 @@ function Hero() {
           </div>
 
           <div className={styles.img_div}>
-            <img src="./Images/phonetwo.jpg" />
+            <img src={phonetwo} />
             <div className={styles.content_sec}>
               <div className={styles.two_icons}>
                 <a>
@@ -373,7 +396,7 @@ function Hero() {
           </div>
 
           <div className={styles.img_div}>
-            <img src="./Images/laces.jpg" />
+            <img src={laces} />
             <div className={styles.content_sec}>
               <div className={styles.two_icons}>
                 <a>
@@ -391,7 +414,7 @@ function Hero() {
           </div>
 
           <div className={styles.img_div}>
-            <img src="./Images/watching.jpg" />
+            <img src={watching} />
             <div className={styles.content_sec}>
               <div className={styles.two_icons}>
                 <a>
@@ -409,7 +432,7 @@ function Hero() {
           </div>
 
           <div className={styles.img_div}>
-            <img src="./Images/hands.jpg" />
+            <img src={hands} />
             <div className={styles.content_sec}>
               <div className={styles.two_icons}>
                 <a>
@@ -427,7 +450,7 @@ function Hero() {
           </div>
 
           <div className={styles.img_div}>
-            <img src="./Images/sleeping.jpg" />
+            <img src={sleeping} />
             <div className={styles.content_sec}>
               <div className={styles.two_icons}>
                 <a>
@@ -445,7 +468,7 @@ function Hero() {
           </div>
 
           <div className={styles.img_div}>
-            <img src="./Images/sewatch.jpg" />
+            <img src={sewatch} />
             <div className={styles.content_sec}>
               <div className={styles.two_icons}>
                 <a>
@@ -463,7 +486,7 @@ function Hero() {
           </div>
 
           <div className={styles.img_div}>
-            <img src="./Images/lastset.jpg" />
+            <img src={lastset} />
             <div className={styles.content_sec}>
               <div className={styles.two_icons}>
                 <a>
@@ -488,7 +511,7 @@ function Hero() {
           <div className={styles.parent_content}>
             <div className={styles.product_card}>
               <div className={styles.two_watches}>
-                <img src="./Images/blackblue.jpg" />
+                <img src={blackblue} />
               </div>
               <div className={styles.items_listing}>
                 <h3>Fitness Tracker Large</h3>
@@ -501,7 +524,7 @@ function Hero() {
           <div className={styles.parent_content}>
             <div className={styles.product_card}>
               <div className={styles.two_watches}>
-                <img src="./Images/blueearphones.jpg" />
+                <img src={blueearphones} />
               </div>
               <div className={styles.items_listing}>
                 <h3>Fitness Tracker Large</h3>
@@ -514,7 +537,7 @@ function Hero() {
           <div className={styles.parent_content}>
             <div className={styles.product_card}>
               <div className={styles.two_watches}>
-                <img src="./Images/bagdumbell.jpg" />
+                <img src={bagdumbell} />
               </div>
               <div className={styles.items_listing}>
                 <h3>Fitness Tracker Large</h3>
@@ -551,7 +574,7 @@ function Hero() {
             <br />
             <span className={styles.team_role}>DEVELOPER</span>
             <div className={styles.person_image}>
-              <img src="./Images/developer.jpg" />
+              <img src={developer} />
             </div>
           </div>
         </div>
@@ -566,23 +589,7 @@ function Hero() {
         </div>
       </section>
 
-      <section className={`${styles.sec_fourteen}  `}>
-        <div className="common_margin">
-          <div className={`${styles.background_img} container  `}>
-            <div className={styles.logo_foot}>
-              <img src="./Images/logofoot.jpg" />
-            </div>
-            <div className={styles.list_items}>
-              <ul>
-                <li>Search</li>
-                <li>Help</li>
-                <li>Privacy Policy</li>
-                <li>Shipping Details</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+ 
     </>
   );
 }

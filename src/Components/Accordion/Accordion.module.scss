@@ -1,0 +1,33 @@
+.accordion_container {
+  margin-bottom: 20px;
+  width: 80%;
+
+  .summary_box {
+    background-color: #333333;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    width: 100%;
+
+    .span_content {
+      color: white;
+      font-size: 20px;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .arrow_down {
+      color: white;
+    }
+  }
+  .accordion_content {
+    margin: 15px 0px 0px 15px;
+    width: 100%;
+
+    p {
+      margin: 5px;
+      padding: 0;
+    }
+  }
+}

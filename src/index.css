@@ -7,15 +7,81 @@ body {
   display: flex;
 }
 
-.container{
+.container {
   max-width: 1200px;
   margin: 0 auto;
 }
-.common_margin{
+.common_margin {
   margin: 70px 0;
 }
 
-.nav_container{
-    max-width: 1400px;
+.nav_margin {
+  margin: 50px 0;
+}
+
+.nav_container {
+  max-width: 1400px;
   margin: 0 auto;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  align-items: center;
+}
+.row_card {
+  display: flex !important;
+  width: 50% !important;
+  flex-direction: row !important;
+}
+.img_rowcard {
+  height: 300px;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+.content_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.icons_hover_effect {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 70% !important;
+  right: 25% !important;
+  display: none;
+  transition: all ease-in-out 0.3s;
+
+  .hover_contents {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 18px;
+
+    .icon_s {
+      color: white;
+      background-color: #333333;
+      border-radius: 50%;
+      object-fit: cover;
+      overflow: hidden;
+      padding: 10px 12px;
+      transition: all ease-in-out 0.4s;
+
+      &:hover {
+        color: black;
+        background-color: yellowgreen;
+      }
+    }
+  }
 }

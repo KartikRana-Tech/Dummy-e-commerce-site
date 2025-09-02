@@ -1,0 +1,37 @@
+ .featured_card {
+          gap: 15px;
+          display: flex;
+          margin-bottom: 50px;
+
+          .feature_image {
+            width: 40%;
+            height: 30%;
+            img {
+              object-fit: cover;
+              height: 100%;
+              width: 100%;
+              overflow: hidden;
+            }
+          }
+          .feature_content {
+            width: 30%;
+            gap: 5px;
+            display: flex;
+            flex-direction: column;
+          }
+
+          h3 {
+            font-size: 18px;
+          }
+
+          h5 {
+            color: #835ff8;
+          }
+
+          p {
+            font-size: 20px;
+            color: goldenrod;
+            margin: 0;
+            line-height: 0;
+          }
+        }
